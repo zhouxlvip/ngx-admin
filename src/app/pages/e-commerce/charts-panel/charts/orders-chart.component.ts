@@ -34,7 +34,7 @@ export class OrdersChartComponent implements AfterViewInit, OnDestroy, OnChanges
 
   constructor(private theme: NbThemeService,
               private layoutService: LayoutService) {
-    this.layoutService.onChangeLayoutSize()
+    this.layoutService.onSafeChangeLayoutSize()
       .pipe(
         takeWhile(() => this.alive),
       )
